@@ -1,0 +1,24 @@
+ .gitignore                            |  45 [32m+++[m
+ .metadata                             |  30 [32m++[m
+ README.md                             |  17 [32m+[m
+ analysis_options.yaml                 |  28 [32m++[m
+ assets/images/Domingo.jpeg            | Bin [31m0[m -> [32m280660[m bytes
+ assets/images/Quarta.jpeg             | Bin [31m0[m -> [32m213299[m bytes
+ assets/images/Sabado.jpeg             | Bin [31m0[m -> [32m381961[m bytes
+ assets/images/Segunda.jpeg            | Bin [31m0[m -> [32m157656[m bytes
+ assets/images/adpv.jpeg               | Bin [31m0[m -> [32m99384[m bytes
+ lib/home_page.dart                    | 476 [32m+++++++++++++++++++++++++++[m
+ lib/main.dart                         |  25 [32m++[m
+ lib/widgets/banner_carousel.dart      | 369 [32m+++++++++++++++++++++[m
+ lib/widgets/church_info_sections.dart | 604 [32m++++++++++++++++++++++++++++++++++[m
+ pubspec.lock                          | 298 [32m+++++++++++++++++[m
+ pubspec.yaml                          |  92 [32m++++++[m
+ test/widget_test.dart                 |  25 [32m++[m
+ web/favicon.png                       | Bin [31m0[m -> [32m917[m bytes
+ web/icons/Icon-192.png                | Bin [31m0[m -> [32m5292[m bytes
+ web/icons/Icon-512.png                | Bin [31m0[m -> [32m8252[m bytes
+ web/icons/Icon-maskable-192.png       | Bin [31m0[m -> [32m5594[m bytes
+ web/icons/Icon-maskable-512.png       | Bin [31m0[m -> [32m20998[m bytes
+ web/index.html                        |  46 [32m+++[m
+ web/manifest.json                     |  35 [32m++[m
+ 23 files changed, 2090 insertions(+)

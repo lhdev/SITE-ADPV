@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'widgets/banner_carousel.dart';
 import 'widgets/church_info_sections.dart';
@@ -140,14 +141,13 @@ class _Header extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Container(
+              SizedBox(
                 width: isCompact ? 40 : 44,
                 height: isCompact ? 40 : 44,
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.12),
-                  borderRadius: BorderRadius.circular(14),
+                child: SvgPicture.asset(
+                  'assets/images/logo-palavra-de-vida.svg',
+                  fit: BoxFit.contain,
                 ),
-                child: const Icon(Icons.church, color: Colors.white),
               ),
               const SizedBox(width: 12),
               Expanded(
