@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'widgets/banner_carousel.dart';
 import 'widgets/church_info_sections.dart';
 
@@ -164,7 +163,7 @@ class _Header extends StatelessWidget {
                     ),
                     if (!isCompact)
                       const Text(
-                        'Assembleia de Deus Palavra de Vida',
+                        'Assembléia de Deus Palavra de Vida',
                         style: TextStyle(color: Colors.white70, fontSize: 12),
                       ),
                   ],
@@ -294,7 +293,7 @@ class _HeroSection extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       const Text(
-                        'Assembleia de Deus Palavra de Vida',
+                        'Assembléia de Deus Palavra de Vida',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,

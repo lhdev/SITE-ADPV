@@ -29,7 +29,7 @@ class WhoWeAreSection extends StatelessWidget {
                     _MissionCard(
                       title: 'Nossa Missao',
                       description:
-                          'Proclamar o evangelho de Jesus Cristo, discipular vidas e servir a comunidade com amor e excelencia.',
+                          'Proclamar o evangelho de Jesus Cristo, discipular vidas e servir a comunidade com amor e excelência.',
                       backgroundColor: Color(0xFF243B87),
                       foregroundColor: Colors.white,
                     ),
@@ -66,7 +66,7 @@ class WhoWeAreSection extends StatelessWidget {
                     SizedBox(width: 20),
                     Expanded(
                       child: _MissionCard(
-                        title: 'VIDAS E FAMILIAS',
+                        title: 'VIDAS E FAMÍLIAS',
                         description:
                             'Valorizamos pessoas e famílias, entendendo a igreja como uma comunidade de fé, comunhão, cuidado, respeito e amor ao próximo.',
                         backgroundColor: Color(0xFFF4B400),
@@ -104,28 +104,28 @@ class WhoWeAreSection extends StatelessWidget {
                   _ValueCard(
                     width: valueCardWidth,
                     icon: Icons.favorite_border_rounded,
-                    title: 'Amor ao Proximo',
+                    title: 'Amor ao Próximo',
                     description:
-                        'Demonstramos o amor de Cristo atraves de acoes praticas e cuidado com cada pessoa.',
+                        'Demonstramos o amor de Cristo atraves de ações práticas e cuidado com cada pessoa.',
                   ),
                   _ValueCard(
                     width: valueCardWidth,
                     icon: Icons.groups_2_outlined,
                     title: 'Comunidade',
                     description:
-                        'Somos uma familia unida em Cristo, onde todos sao bem-vindos e acolhidos.',
+                        'Somos uma familia unida em Cristo, onde todos são bem-vindos e acolhidos.',
                   ),
                   _ValueCard(
                     width: valueCardWidth,
                     icon: Icons.church_outlined,
-                    title: 'Adoracao',
+                    title: 'Adoracão',
                     description:
-                        'Cultuamos a Deus em espirito e em verdade, exaltando Seu nome em tudo.',
+                        'Cultuamos a Deus em espírito e em verdade, exaltando Seu nome em tudo.',
                   ),
                   _ValueCard(
                     width: valueCardWidth,
                     icon: Icons.public_rounded,
-                    title: 'Missoes',
+                    title: 'Missões',
                     description:
                         'Levamos o evangelho ate os confins da terra, cumprindo a Grande Comissao.',
                   ),
@@ -193,12 +193,10 @@ class ContactFooter extends StatelessWidget {
                     title: 'ENDEREÇO',
                     lines: const [
                       _ContactLine(
-                        text: 'Av Prof Osvaldo de Oliveira, 611',
+                        text: 'Av Prof Osvaldo de Oliveira, 611, Jardim Helena - Sao Paulo, SP CEP: 08420-280',
                         addressUrl:
                             'https://www.google.com/maps/search/?api=1&query=Av+Prof+Osvaldo+de+Oliveira+611+Jardim+Helena+Sao+Paulo+SP',
                       ),
-                      _ContactLine(text: 'Jardim Helena - Sao Paulo, SP'),
-                      _ContactLine(text: 'CEP: 08420-280'),
                     ],
                   ),
                   _ContactItem(
@@ -217,11 +215,11 @@ class ContactFooter extends StatelessWidget {
                   ),
                   _ContactItem(
                     width: contactItemWidth,
-                    title: 'Email',
+                    title: 'E-MAILS',
                     lines: const [
                       _ContactLine(
-                        text: 'secretaria@adpalavradevida.com.br',
-                        emailUrl: 'mailto:secretaria@adpalavradevida.com.br',
+                        text: 'secretariaadpv26@gmail.com.br',
+                        emailUrl: 'mailto:secretariaadpv26@gmail.com.br',
                       ),
                       _ContactLine(
                         text: 'renato.willians@iadpalavradevida.com.br',
