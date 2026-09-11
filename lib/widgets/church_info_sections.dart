@@ -43,7 +43,7 @@ class WhoWeAreSection extends StatelessWidget {
                     ),
                     SizedBox(height: 16),
                     _MissionCard(
-                      title: 'Chamados para Servir',
+                      title: 'CHAMADOS PARA SERVIR',
                       description:
                           'Cremos que Deus chama e capacita para servir, com estudo das Escrituras, disciplina, compromisso com a obra e com excelência.',
                       backgroundColor: Color(0xFF243B87),
