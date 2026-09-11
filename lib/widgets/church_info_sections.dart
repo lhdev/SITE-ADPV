@@ -27,17 +27,17 @@ class WhoWeAreSection extends StatelessWidget {
                 const Column(
                   children: [
                     _MissionCard(
-                      title: 'Nossa Missao',
+                      title: 'PALAVRA QUE TRANSFORMA',
                       description:
-                          'Proclamar o evangelho de Jesus Cristo, discipular vidas e servir a comunidade com amor e excelência.',
+                          'A Bíblia é nossa referência de fé, prática e vida. Buscamos conhecer a Palavra de Deus e permitir que ela transforme nossa maneira de viver.',
                       backgroundColor: Color(0xFF243B87),
                       foregroundColor: Colors.white,
                     ),
                     SizedBox(height: 16),
                     _MissionCard(
-                      title: 'Nossa Visao',
+                      title: 'VIDAS E FAMÍLIAS',
                       description:
-                          'Ser uma igreja referencia em adoracao, ensino e acao social, alcancando milhares de vidas com o amor de Cristo.',
+                          'Valorizamos pessoas e famílias, entendendo a igreja como uma comunidade de fé, comunhão, cuidado, respeito e amor ao próximo.',
                       backgroundColor: Color(0xFFF4B400),
                       foregroundColor: Color(0xFF0F172A),
                     ),
@@ -193,7 +193,8 @@ class ContactFooter extends StatelessWidget {
                     title: 'ENDEREÇO',
                     lines: const [
                       _ContactLine(
-                        text: 'Av Prof Osvaldo de Oliveira, 611, Jardim Helena - Sao Paulo, SP CEP: 08420-280',
+                        text:
+                            'Av Prof Osvaldo de Oliveira, 611, Jardim Helena - Sao Paulo, SP CEP: 08420-280',
                         addressUrl:
                             'https://www.google.com/maps/search/?api=1&query=Av+Prof+Osvaldo+de+Oliveira+611+Jardim+Helena+Sao+Paulo+SP',
                       ),
