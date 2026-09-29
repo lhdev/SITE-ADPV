@@ -139,6 +139,196 @@ class WhoWeAreSection extends StatelessWidget {
   }
 }
 
+class PastorsSection extends StatelessWidget {
+  const PastorsSection({super.key});
+
+  static const _biography =
+      'O Pastor Renato Willians e a Miss Daiane Willians são casados há 17 anos e são pais de Ana e Arthur. Juntos, servem a Cristo e exercem o ministério pastoral à frente da Assembleia de Deus – Palavra de Vida – Sede | Jd. São Pedro/SP, em São Paulo.\n\n'
+      'Há 10 anos, o Senhor deu ao Pastor Renato e à Miss Daiane a visão e a direção para iniciar um ministério com o propósito de cuidar das famílias por meio da Palavra de Deus, fortalecendo lares e conduzindo pessoas a uma vida firmada em Cristo.\n\n'
+      'Durante aproximadamente três anos, permaneceram em oração, buscando a vontade e o direcionamento do Senhor. No tempo determinado por Deus, receberam a resposta e a direção para seguir adiante e, assim, nasceu a Assembleia de Deus – Palavra de Vida (ADPV).\n\n'
+      'Desde então, o ministério tem como fundamento a Palavra de Deus, o Evangelho de Cristo e o cuidado com as famílias, entendendo que um ministério sólido também começa em um lar firmado nos princípios do Senhor.\n\n'
+      'O Pastor Renato Willians é fundador, diretor e professor de Teologia do ITEPAV – Instituto Teológico Palavra de Vida, contribuindo para a formação e capacitação de homens e mulheres para o serviço cristão.\n\n'
+      'Para os pastores, a família é uma base sólida para o ministério e para a vida cristã. Com profunda convicção na Palavra de Deus e amor pelas Sagradas Escrituras, seguem servindo a Cristo com fé e dedicação, buscando viver e ensinar os princípios do Evangelho, edificar vidas e fortalecer famílias para a glória de Deus.';
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final isMobile = constraints.maxWidth < 700;
+        final stackColumns = constraints.maxWidth < 1116;
+        final padding = isMobile ? 18.0 : 32.0;
+        final textContent = Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'PASTORES RENATO WILLIANS E DAIANE WILLIANS',
+              style: TextStyle(
+                color: const Color(0xFF0F172A),
+                fontSize: isMobile ? 23 : 28,
+                fontWeight: FontWeight.w700,
+                height: 1.25,
+              ),
+            ),
+            const SizedBox(height: 18),
+            Text(
+              _biography,
+              style: TextStyle(
+                color: const Color(0xFF334155),
+                fontSize: isMobile ? 16 : 17,
+                height: 1.7,
+              ),
+            ),
+          ],
+        );
+        final pastorPhoto = ClipRRect(
+          borderRadius: BorderRadius.circular(18),
+          child: Image.asset(
+            'assets/images/Pastores-instituto.png',
+            fit: BoxFit.cover,
+            alignment: Alignment.topCenter,
+          ),
+        );
+
+        return Container(
+          width: double.infinity,
+          padding: EdgeInsets.all(padding),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(isMobile ? 22 : 28),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.05),
+                blurRadius: 18,
+                offset: const Offset(0, 10),
+              ),
+            ],
+          ),
+          child: stackColumns
+              ? Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    textContent,
+                    const SizedBox(height: 24),
+                    Center(
+                      child: ConstrainedBox(
+                        constraints: const BoxConstraints(maxWidth: 620),
+                        child: AspectRatio(
+                          aspectRatio: 0.55,
+                          child: SizedBox.expand(child: pastorPhoto),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+              : IntrinsicHeight(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Expanded(flex: 4, child: textContent),
+                      const SizedBox(width: 32),
+                      Expanded(flex: 2, child: pastorPhoto),
+                    ],
+                  ),
+                ),
+        );
+      },
+    );
+  }
+}
+
+class InstituteSection extends StatelessWidget {
+  const InstituteSection({super.key});
+
+  static const _placeholderText =
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\n'
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final isMobile = constraints.maxWidth < 700;
+        final padding = isMobile ? 18.0 : 32.0;
+        final instituteImage = ClipRRect(
+          borderRadius: BorderRadius.circular(16),
+          child: Image.asset(
+            'assets/images/Pastores-instituto.png',
+            fit: BoxFit.cover,
+            semanticLabel: 'Instituto AD Palavra de Vida',
+          ),
+        );
+        final instituteText = Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'INSTITUTO AD PALAVRA DE VIDA',
+              style: TextStyle(
+                color: const Color(0xFF0F172A),
+                fontSize: isMobile ? 23 : 28,
+                fontWeight: FontWeight.w700,
+                height: 1.25,
+              ),
+            ),
+            const SizedBox(height: 18),
+            Text(
+              _placeholderText,
+              style: TextStyle(
+                color: const Color(0xFF334155),
+                fontSize: isMobile ? 16 : 17,
+                height: 1.7,
+              ),
+            ),
+          ],
+        );
+
+        return Container(
+          width: double.infinity,
+          padding: EdgeInsets.all(padding),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(isMobile ? 22 : 28),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.05),
+                blurRadius: 18,
+                offset: const Offset(0, 10),
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              isMobile
+                  ? Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        instituteText,
+                        const SizedBox(height: 24),
+                        AspectRatio(aspectRatio: 1.5, child: instituteImage),
+                      ],
+                    )
+                  : Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Expanded(flex: 3, child: instituteText),
+                        const SizedBox(width: 32),
+                        Expanded(
+                          flex: 2,
+                          child: AspectRatio(
+                            aspectRatio: 1.1,
+                            child: instituteImage,
+                          ),
+                        ),
+                      ],
+                    ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}
+
 class ContactFooter extends StatelessWidget {
   const ContactFooter({super.key});
 

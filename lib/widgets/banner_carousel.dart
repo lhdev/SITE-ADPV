@@ -248,8 +248,10 @@ class BannerImageCard extends StatelessWidget {
             ColoredBox(
               color: backgroundColor,
               child: imagePadding == EdgeInsets.zero
-                  ? content
-                  : Padding(padding: imagePadding, child: content),
+                  ? HoverZoom(child: content)
+                  : HoverZoom(
+                      child: Padding(padding: imagePadding, child: content),
+                    ),
             ),
             if (overlayText != null && overlayText!.isNotEmpty)
               Positioned(
@@ -311,6 +313,34 @@ class BannerImageCard extends StatelessWidget {
           color: Color(0xFF1E3A8A),
           size: 48,
         ),
+      ),
+    );
+  }
+}
+
+class HoverZoom extends StatefulWidget {
+  const HoverZoom({super.key, required this.child});
+
+  final Widget child;
+
+  @override
+  State<HoverZoom> createState() => _HoverZoomState();
+}
+
+class _HoverZoomState extends State<HoverZoom> {
+  var _isHovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      onEnter: (_) => setState(() => _isHovered = true),
+      onExit: (_) => setState(() => _isHovered = false),
+      child: AnimatedScale(
+        scale: _isHovered ? 1.03 : 1,
+        duration: const Duration(milliseconds: 220),
+        curve: Curves.easeOutCubic,
+        child: widget.child,
       ),
     );
   }
